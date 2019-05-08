@@ -1,13 +1,13 @@
-precio = ARGV[0].to_i
-usuarios = ARGV[1].to_i
-gastos = ARGV[2].to_i
+price = ARGV[0].to_i
+users = ARGV[1].to_i
+costs = ARGV[2].to_i
 
-utilidades = precio * usuarios - gastos
+income = price * users - costs
 
-if utilidades > 0
-  impuesto = utilidades * 0.35
-  total = utilidades - impuesto
-  puts "Tus utilidades son #{total}"
+if income > 0
+  tax = income * 0.35
+  utilities = income - tax
+  puts "Tus utilidades son #{utilities}"
 else
-  puts "Tus utilidades son #{utilidades}"
+  puts "Tus utilidades son #{income}"
 end
