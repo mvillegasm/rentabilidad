@@ -6,13 +6,11 @@ users_p = ARGV[2].to_i # Cantidad de usuarios premium
 costs = ARGV[3].to_i #Gastos (20000)
 
 # Se calcula el ingreso sumando la cantidad de planes
-# normales y planes premium
+# normales y planes premium y se le resta el costo
 income = (users * price)+(users_p * (price * 2)) - costs
 
-# Se calculan las utilidades restando el costo
-utilities = income - costs
-
-# Si el ingre
+# Si el ingreso es mayor a 0 se aplica impuesto
+# y se muestra por pantalla las utilidades
 if income > 0
   tax = income * 0.35
   utilities = income - tax
